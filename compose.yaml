@@ -1,0 +1,20 @@
+# Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-zhuatech_demo}
+    volumes: ["./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro"]
+    ports: ["3307:3306"]
+  api:
+    build: ./backend
+    environment:
+      ZHUATECH_LLM_PROVIDER: ${ZHUATECH_LLM_PROVIDER:-local}
+      ZHUATECH_LLM_BASE_URL: ${ZHUATECH_LLM_BASE_URL:-https://api.deepseek.com}
+      ZHUATECH_LLM_MODEL: ${ZHUATECH_LLM_MODEL:-deepseek-chat}
+      ZHUATECH_LLM_API_KEY: ${ZHUATECH_LLM_API_KEY:-}
+    ports: ["8080:8080"]
+  web:
+    image: nginx:1.27-alpine
+    volumes: ["./frontend:/usr/share/nginx/html:ro"]
+    ports: ["8088:80"]

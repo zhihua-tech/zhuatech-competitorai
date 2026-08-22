@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="知华科技智能竞品分析系统，从可追溯资料中整理竞品变化、差异点和验证任务。预留 DeepSeek 兼容接口。">
+  <meta name="keywords" content="智能竞品分析,竞争情报,竞品矩阵,市场分析,产品策略,DeepSeek Java,知华科技">
+  <title>ZhuaTech Competitor Intelligence｜知华科技智能竞品分析系统</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css">
+</head>
+<body style="--accent:#6845a6;--accent-2:#8563bf">
+  <aside class="sidebar">
+    <a class="brand" href="https://www.zhuatech.cn/" target="_blank"><span class="brand-mark">ZH</span><span><b>知华科技</b><small>COMPETITOR INTELLIGENCE</small></span></a>
+    <div class="workspace-name"><span>企业工作空间</span><b>上海演示环境⌄</b></div>
+    <nav><button class="nav-item active"><span>▦</span>情报动态</button>
+      <button class="nav-item "><span>◇</span>竞品矩阵</button>
+      <button class="nav-item "><span>✓</span>证据资料</button>
+      <button class="nav-item "><span>⌁</span>分析任务</button></nav>
+    <div class="side-card"><b>本地演示模式</b><p>不会调用外部模型，也不会上传真实业务数据。</p><a href="https://www.zhuatech.cn/" target="_blank">访问知华科技官网 ↗</a></div>
+  </aside>
+  <main>
+    <header class="topbar"><div><p>市场竞争情报 / 工作台</p><h1>智能竞品分析</h1></div><div class="top-actions"><button class="icon-button">⌕</button><button class="icon-button">?</button><span class="avatar">知</span></div></header>
+    <div class="content">
+      <section class="page-head"><div><h2>市场竞争情报工作台</h2><p>从可追溯资料中整理竞品变化、差异点和验证任务</p></div><button class="primary" id="run-open">＋ 新建分析任务</button></section>
+      <section class="metrics"><article class="metric"><span>跟踪竞品</span><strong>16</strong><small>较昨日 +8%</small></article>
+        <article class="metric"><span>本周变化</span><strong>27</strong><small>本周保持稳定</small></article>
+        <article class="metric"><span>待验证</span><strong>8</strong><small>需要优先处理</small></article>
+        <article class="metric"><span>有效证据</span><strong>312</strong><small>数据更新于 10:30</small></article></section>
+      <section class="workspace-grid">
+        <article class="panel queue-panel">
+          <header><div><h3>当前处理队列</h3><p>按风险和更新时间排序</p></div><div class="tools"><label>⌕<input id="search" placeholder="搜索记录"></label><button id="refresh">刷新</button></div></header>
+          <div class="table-wrap"><table><thead><tr><th>情报主题</th><th>竞品</th><th>信息来源</th><th>可信度</th><th>状态</th></tr></thead><tbody><tr data-keywords="移动盘点能力更新 竞品 A 公开产品文档 高 已验证"><td><b>移动盘点能力更新</b></td><td>竞品 A</td><td>公开产品文档</td><td><span class="risk r0">高</span></td><td>已验证</td></tr>
+            <tr data-keywords="新套餐价格调整 竞品 B 官网价格页 中 待复核"><td><b>新套餐价格调整</b></td><td>竞品 B</td><td>官网价格页</td><td><span class="risk r1">中</span></td><td>待复核</td></tr>
+            <tr data-keywords="渠道合作政策 竞品 C 行业报道 中 跟踪中"><td><b>渠道合作政策</b></td><td>竞品 C</td><td>行业报道</td><td><span class="risk r2">中</span></td><td>跟踪中</td></tr></tbody></table></div>
+          <footer><span>显示 3 条重点记录</span><div><button>‹</button><b>1</b><button>›</button></div></footer>
+        </article>
+        <article class="panel insight-panel">
+          <header><div><span class="eyebrow">AI 辅助分析</span><h3>移动盘点能力更新</h3><p>仓储产品季度竞品复盘</p></div><span class="status">待人工确认</span></header>
+          <section class="summary"><b>分析摘要</b><p>竞品 A 新增离线盘点与批次追溯，公开文档显示其目标客户仍以中型仓储为主。建议验证实际交付边界。</p></section>
+          <ul class="findings"><li><span>1</span><div><b>识别结果</b><p>离线盘点已出现在公开版本说明</p></div><em>94%</em></li>
+              <li><span>2</span><div><b>风险关注</b><p>批次追溯需购买高级模块</p></div><em>82%</em></li>
+              <li><span>3</span><div><b>处理边界</b><p>暂未发现跨仓调拨优化能力</p></div><em>76%</em></li></ul>
+          <section class="actions"><b>建议动作</b><label><input type="checkbox"><span>安排试用验证功能边界</span></label>
+              <label><input type="checkbox"><span>更新销售差异化话术</span></label>
+              <label><input type="checkbox"><span>一个月后复查版本说明</span></label></section>
+          <footer><button class="secondary">查看依据</button><button class="primary" id="approve">确认并进入流程</button></footer>
+        </article>
+      </section>
+      <div class="audit-line"><span>最后同步：2026-08-22 10:30</span><span>所有模型输出均需人工复核 · 上海如静知华信息科技有限公司</span></div>
+    </div>
+  </main>
+  <dialog id="run-dialog"><form method="dialog"><button class="close" value="cancel">×</button><span class="dialog-icon">竞</span><h3>新建智能竞品分析任务</h3><p>填写演示对象与业务上下文，系统将执行本地确定性规则。</p><label>分析对象<input id="subject" value="移动盘点能力更新"></label><label>业务场景<input id="scenario" value="仓储产品季度竞品复盘"></label><label>补充上下文<textarea id="context">请结合当前业务规则给出可解释结果和后续动作。</textarea></label><label class="check"><input id="human-review" type="checkbox" checked> 结果进入人工复核队列</label><button class="primary wide" id="run-submit" value="default">运行演示分析</button><small id="run-status"></small></form></dialog>
+  <div class="toast" id="toast">已确认，任务进入后续流程</div><script src="app.js"></script>
+</body></html>

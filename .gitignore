@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+.vscode/
+target/
+**/target/
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+output/playwright/

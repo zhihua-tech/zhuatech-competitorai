@@ -1,0 +1,12 @@
+# Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
+spring:
+  application:
+    name: zhuatech-competitorai
+server:
+  port: ${SERVER_PORT:8080}
+zhuatech:
+  llm:
+    provider: ${ZHUATECH_LLM_PROVIDER:local}
+    base-url: ${ZHUATECH_LLM_BASE_URL:https://api.deepseek.com}
+    model: ${ZHUATECH_LLM_MODEL:deepseek-chat}
+    api-key: ${ZHUATECH_LLM_API_KEY:}
