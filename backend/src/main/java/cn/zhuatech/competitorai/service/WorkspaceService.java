@@ -13,8 +13,14 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class WorkspaceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public RunResult run(RunRequest request) {
         List<String> warnings = new ArrayList<>();
         if (!request.humanReview()) warnings.add("未启用人工复核，结果不能进入正式业务流程");
@@ -44,6 +50,9 @@ public class WorkspaceService {
             List.copyOf(warnings), providerPayload, "LOCAL_DEMO_PIPELINE", OffsetDateTime.now());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record RunRequest(
         @NotBlank String subject,
         @NotBlank String scenario,
@@ -52,8 +61,17 @@ public class WorkspaceService {
         @Size(max = 1200) String context
     ) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Insight(String type, String content, int confidence) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Action(String task, String ownerRole, String dueHint) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record RunResult(String status, String riskLevel, String summary, List<Insight> insights,
                             List<Action> actions, List<String> warnings, Map<String, Object> providerPayload,
                             String executionMode, OffsetDateTime generatedAt) {}
