@@ -19,7 +19,7 @@ document.querySelector('#run-submit').addEventListener('click', async (event) =>
     confidenceFloor: 75, humanReview: document.querySelector('#human-review').checked, context: document.querySelector('#context').value};
   status.textContent = '正在运行本地演示规则…';
   try {
-    const response = await fetch('http://localhost:8080/api/competitorai/run', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const response = await fetch('/api/competitorai/run', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
     if (!response.ok) throw new Error('backend unavailable');
     const result = await response.json(); status.textContent = result.status === 'REVIEW_READY' ? '分析完成，已进入人工复核队列' : '分析完成，需要启用人工复核';
   } catch (_) { status.textContent = payload.humanReview ? '本地演示完成，已进入人工复核队列' : '本地演示完成，需要启用人工复核'; }
