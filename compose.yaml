@@ -14,7 +14,16 @@ services:
       ZHUATECH_LLM_MODEL: ${ZHUATECH_LLM_MODEL:-deepseek-chat}
       ZHUATECH_LLM_API_KEY: ${ZHUATECH_LLM_API_KEY:-}
     ports: ["8080:8080"]
+    healthcheck:
+      test: ["CMD-SHELL", "if command -v nc >/dev/null 2>&1; then nc -z 127.0.0.1 8080; else bash -c '</dev/tcp/127.0.0.1/8080'; fi"]
+      interval: 5s
+      timeout: 3s
+      retries: 40
+      start_period: 15s
   web:
     image: nginx:1.27-alpine
     volumes: ["./frontend:/usr/share/nginx/html:ro"]
     ports: ["8088:80"]
+    depends_on:
+      api:
+        condition: service_healthy
