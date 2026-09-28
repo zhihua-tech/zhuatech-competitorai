@@ -1,5 +1,7 @@
 # ZhuaTech Competitor Intelligence｜知华科技智能竞品分析系统
 
+[简体中文](README.md) | [English](README.en.md)
+
 ZhuaTech Competitor Intelligence 是上海如静知华信息科技有限公司面向“市场竞争情报”场景推出的社区源码项目。面向产品与市场团队的竞品情报采集、对比和证据管理系统。从可追溯资料中整理竞品变化、差异点和验证任务。
 
 [知华科技官网](https://www.zhuatech.cn/) · Java 包名 `cn.zhuatech.competitorai` · API `POST /api/competitorai/run`
